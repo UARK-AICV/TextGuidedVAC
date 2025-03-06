@@ -24,7 +24,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-  <title>AISFormer: Amodal Instance Segmentation with Transformer</title>
+  <title>Text-Guided Video Amodal Completion</title>
   <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
   rel="stylesheet">
@@ -52,23 +52,26 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">AISFormer: Amodal Instance Segmentation with Transformer</h1>
+            <h1 class="title is-1 publication-title">Text-Guided Video Amodal Completion</h1>
             <div class="is-size-5 publication-authors">
                 <!-- Paper authors -->
               <span class="author-block">
                 <a href="https://trqminh.github.io/" target="_blank">Minh Tran</a><sup>1</sup>,
               </span>
               <span class="author-block">
-                <a href="https://vhvkhoa.github.io/" target="_blank">Khoa Vo</a><sup>1</sup>,
+                <a href="https://vhvkhoa.github.io/" target="_blank">Winston Bounsavy</a><sup>1</sup>,
               </span>
               <span class="author-block">
-                <a href="https://kashu7100.github.io/" target="_blank">Kashu Yamazaki</a><sup>1</sup>,
+                <a href="https://kashu7100.github.io/" target="_blank">Taisei Hanyu</a><sup>1</sup>,
               </span>
               <span class="author-block">
-                <a href="" target="_blank">Arthur Fernandes</a><sup>2</sup>,
+                <a href="" target="_blank">Thang Pham</a><sup>2</sup>,
               </span>
               <span class="author-block">
-                <a href="" target="_blank">Michael Kidd</a><sup>1</sup>,
+                <a href="" target="_blank">Khoa Vo</a><sup>1</sup>,
+              </span>
+              <span class="author-block">
+                <a href="" target="_blank">Tri Nguyen</a><sup>2</sup>,
               </span>
               <span class="author-block">
                 <a href="https://uark-aicv.github.io/" target="_blank">Ngan Le</a><sup>1</sup>
@@ -77,9 +80,9 @@
 
             <div class="is-size-5 publication-authors">
               <span class="author-block"><sup>1</sup>University of Arkansas</span>&nbsp;&nbsp;&nbsp;
-              <span class="author-block"><sup>2</sup>Cobb-Vantress, Inc</span>
+              <span class="author-block"><sup>2</sup>Coupang, Inc.</span>
               <br>
-              <span class="author-block">BMVC 2022</span>
+              <span class="author-block">[CONFERENCE NAME HERE]</span>
             </div>
 
                   <div class="column has-text-centered">
@@ -153,9 +156,9 @@
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <img src="static/images/aisformer/aistr-Flowchart/aistr-Flowchart-1.png" alt="MY ALT TEXT"/>
+        <img src="static/images/VAC/teaser.png" alt="MY ALT TEXT"/>
         <h2 class="subtitle has-text-centered">
-          The overall flowchart of our proposed AISFormer, integrating feature encoding, mask decoding, invisible mask embedding, and segmentation to generate occluder, visible, amodal, and invisible masks.
+          [SAMPLE TEXT]
        </h2>
       </div>
     </div>
@@ -172,7 +175,7 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Amodal Instance Segmentation (AIS) aims to segment the region of both visible and possible occluded parts of an object instance. While Mask R-CNN-based AIS approaches have shown promising results, they are unable to model high-level features coherence due to the limited receptive field. The most recent transformer-based models show impressive performance on vision tasks, even better than Convolution Neural Networks (CNN). In this work, we present AISFormer, an AIS framework, with a Transformer-based mask head. AISFormer explicitly models the complex coherence between occluder, visible, amodal, and invisible masks within an object's regions of interest by treating them as learnable queries. Specifically, AISFormer contains four modules: (i) feature encoding: extract ROI and learn both short-range and long-range visual features. (ii) mask transformer decoding: generate the occluder, visible, and amodal mask query embeddings by a transformer decoder (iii) invisible mask embedding:  model the coherence between the amodal and visible masks, and (iv) mask predicting: estimate output masks including occluder, visible, amodal and invisible. We conduct extensive experiments and ablation studies on three challenging benchmarks i.e. KINS, D2SA, and COCOA-cls to evaluate the effectiveness of AISFormer. 
+            Amodal perception enables humans to perceive entire objects even when parts are occluded, a remarkable cognitive skill that artificial intelligence struggles to replicate. While substantial advancements have been made in image amodal completion, video amodal completion remains underexplored despite its high potential for real-world applications in video editing and analysis. In response, we propose a video amodal completion framework to explore this potential direction. Our contributions include (i) a synthetic dataset for video amodal completion with text description for the object of interest. The dataset captures a variety of object types, textures, motions, and scenarios to support zero-shot transferring on natural videos. (ii) A diffusion-based text-guided video amodal completion framework enhanced with a motion continuity module to ensure temporal consistency across frames. (iii) Zero-shot inference for long video, inspired by temporal diffusion techniques to effectively manage long video sequences while improving inference accuracy and maintaining coherent amodal completions. Experimental results shows the efficacy of our approach in handling video amodal completion, opening potential capabilities for advanced video editing and analysis with amodal completion.
           </p>
         </div>
       </div>
@@ -188,14 +191,14 @@
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">Amodal Instance Segmentation (AIS)</h2>
-        <img src="static/images/aisformer/AIS_explain/AIS_explain-1.png" alt="MY ALT TEXT"/>
+        <h2 class="title is-3">TITLE TEXT</h2>
+        <img src="static/images/VAC/pipeline-1.png" alt="MY ALT TEXT"/>
         <h2 class="subtitle has-text-centered">
-          An explanation of different mask instances in Amodal Instance Segmentation (AIS). Given a region of interest (ROI) extracted by an object detector, AIS aims to extract both visible and invisible mask instances including occluder, visible, amodal, and invisible.
+          [Sample Text]
         </h2>
-        <img src="static/images/aisformer/ISvsAIS/ISvsAIS-1.png" alt="MY ALT TEXT"/>
+        <img src="static/images/VAC/dataset_creation-1.png" alt="MY ALT TEXT"/>
         <h2 class="subtitle has-text-centered">
-          A comparison between Instance Segmentation (IS) and Amodal Instance Segmentation (AIS). Given an image with ROI (a), IS aims to extract the visible mask instance (b) whereas AIS aims to extract both the visible mask and occluded parts (c).
+          [Sample Text]
         </h2>
       </div>
     </div>
@@ -223,10 +226,10 @@
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">AISFormer Mask Head</h2>
+        <h2 class="title is-3">TITLE TEXT</h2>
         <img src="static/images/aisformer/aistr-Encoder-Decoder/aistr-Encoder-Decoder-1.png" alt="MY ALT TEXT"/>
         <h2 class="subtitle has-text-centered">
-          Illustration network architecture of AISFormer. (a): mask transformer encoder is designed as one block of self-attention, (b): mask transformer decoder is designed as a combination of one block of self-attention and one block of cross-attention and (c): invisible embedding is designed as an MLP with two hidden layers. 
+          [Sample Text]
         </h2>
       </div>
     </div>
@@ -237,28 +240,28 @@
 <!-- Qualitative Results -->
 <section class="hero is-small">
   <div class="hero-body has-text-centered">
-    <h2 class="title is-3">Qualitative Results</h2>
+    <h2 class="title is-3">RESULTS</h2>
     <div class="container">
       <div id="results-carousel" class="carousel results-carousel">
        <div class="item">
         <!-- Your image here -->
-        <img src="static/images/aisformer/D2SAQual/D2SAQual-1.png" alt="MY ALT TEXT"/>
+        <img src="static/images/VAC/example_easy_case.png" alt="MY ALT TEXT"/>
         <h2 class="subtitle has-text-centered">
-          Qualitative Results on D2SA dataset.
+          [Sample Text 1]
         </h2>
       </div>
       <div class="item">
         <!-- Your image here -->
-        <img src="static/images/aisformer/KINSQual.png" alt="MY ALT TEXT"/>
+        <img src="static/images/VAC/example_hard_case.png" alt="MY ALT TEXT"/>
         <h2 class="subtitle has-text-centered">
-          Qualitative Results on KINS dataset.
+          [Sample Text 2]
         </h2>
       </div>
       <div class="item">
         <!-- Your image here -->
-        <img src="static/images/aisformer/COCOAQual/COCOAQual-1.png" alt="MY ALT TEXT"/>
+        <img src="static/images/VAC/example_zero_shot.png" alt="MY ALT TEXT"/>
         <h2 class="subtitle has-text-centered">
-          Qualitative Results on COCOA dataset.
+          [Sample Text 3]
        </h2>
      </div>
      <!-- <div class="item">
@@ -351,12 +354,7 @@
   <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
       <h2 class="title">BibTeX</h2>
-      <pre><code>@article{tran2022aisformer,
-        title={AISFormer: Amodal Instance Segmentation with Transformer},
-        author={Tran, Minh and Vo, Khoa and Yamazaki, Kashu and Fernandes, Arthur and Kidd, Michael and Le, Ngan},
-        journal={arXiv preprint arXiv:2210.06323},
-        year={2022}
-      }</code></pre>
+      <pre><code> [CITATION HERE]</code></pre>
     </div>
 </section>
 <!--End BibTex citation -->
@@ -370,7 +368,8 @@
         <div class="content">
 
           <p>
-            This material is based upon work supported by the National Science Foundation (NSF) under Award No OIA-1946391, NSF 1920920, and NSF 2223793.
+            This work is sponsored by National Science Foundation (NSF) under Award No OIA-1946391 RII Track-1 Honors College Research Award, University of Arkansas,
+NSF 2223793 EFRI BRAID
              <br><br>
             This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page. This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
             Commons Attribution-ShareAlike 4.0 International License</a>.
