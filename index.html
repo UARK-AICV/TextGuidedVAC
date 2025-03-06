@@ -59,19 +59,19 @@
                 <a href="https://trqminh.github.io/" target="_blank">Minh Tran</a><sup>1</sup>,
               </span>
               <span class="author-block">
-                <a href="https://vhvkhoa.github.io/" target="_blank">Winston Bounsavy</a><sup>1</sup>,
+                <a href="https://uark-aicv.github.io/TextGuidedVAC/" target="_blank">Winston Bounsavy</a><sup>1</sup>,
               </span>
               <span class="author-block">
-                <a href="https://kashu7100.github.io/" target="_blank">Taisei Hanyu</a><sup>1</sup>,
+                <a href="https://uark-aicv.github.io/TextGuidedVAC/" target="_blank">Taisei Hanyu</a><sup>1</sup>,
               </span>
               <span class="author-block">
-                <a href="" target="_blank">Thang Pham</a><sup>1</sup>,
+                <a href="https://uark-aicv.github.io/TextGuidedVAC/" target="_blank">Thang Pham</a><sup>1</sup>,
               </span>
               <span class="author-block">
-                <a href="" target="_blank">Khoa Vo</a><sup>1</sup>,
+                <a href="https://vhvkhoa.github.io/" target="_blank">Khoa Vo</a><sup>1</sup>,
               </span>
               <span class="author-block">
-                <a href="" target="_blank">Tri Nguyen</a><sup>2</sup>,
+                <a href="https://uark-aicv.github.io/TextGuidedVAC/" target="_blank">Tri Nguyen</a><sup>2</sup>,
               </span>
               <span class="author-block">
                 <a href="https://uark-aicv.github.io/" target="_blank">Ngan Le</a><sup>1</sup>
@@ -82,14 +82,14 @@
               <span class="author-block"><sup>1</sup>University of Arkansas</span>&nbsp;&nbsp;&nbsp;
               <span class="author-block"><sup>2</sup>Coupang, Inc.</span>
               <br>
-              <span class="author-block">[CONFERENCE NAME HERE]</span>
+              <span class="author-block">Preprint 2024</span>
             </div>
 
                   <div class="column has-text-centered">
                     <div class="publication-links">
                          <!-- Arxiv PDF link -->
                       <span class="link-block">
-                        <a href="https://arxiv.org/pdf/2210.06323" target="_blank"
+                        <a href="https://trqminh.github.io/pdfs/vac.pdf" target="_blank"
                         class="external-link button is-normal is-rounded is-dark">
                         <span class="icon">
                           <i class="fas fa-file-pdf"></i>
@@ -100,7 +100,7 @@
 
                   <!-- Github link -->
                   <span class="link-block">
-                    <a href="https://github.com/UARK-AICV/AISFormer" target="_blank"
+                    <a href="https://github.com/UARK-AICV/TextGuidedVAC" target="_blank"
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="fab fa-github"></i>
@@ -158,7 +158,12 @@
       <div class="column is-four-fifths">
         <img src="static/images/VAC/teaser.png" alt="MY ALT TEXT"/>
         <h2 class="subtitle has-text-centered">
-          [SAMPLE TEXT]
+          An overview of our text-guided video amodal completion pipeline. Given an
+input video, users select an object of interest in the first frame and provide a text descrip-
+tion of the expected output. Our pipeline then generates a completed video, filling in the
+missing shape and texture of the object. (Top) A summary of our proposed pipeline and
+three key contributions. (Bottom) Zero-shot transfer results on natural videos using our
+method.
        </h2>
       </div>
     </div>
@@ -191,15 +196,16 @@
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">TITLE TEXT</h2>
+        <h2 class="title is-3">Training pipeline of the proposed method</h2>
         <img src="static/images/VAC/pipeline-1.png" alt="MY ALT TEXT"/>
         <h2 class="subtitle has-text-centered">
-          [Sample Text]
+          Our approach follows a common two-stage training strategy: first, training a denoising UNet at the frame level to
+capture spatial features, and then incorporating motion training to ensure temporal coherence.
         </h2>
-        <img src="static/images/VAC/example_qualitative.png" alt="MY ALT TEXT"/>
+        <!-- <img src="static/images/VAC/example_qualitative.png" alt="MY ALT TEXT"/>
         <h2 class="subtitle has-text-centered">
           [Sample Text]
-        </h2>
+        </h2> -->
       </div>
     </div>
   </div>
@@ -226,10 +232,13 @@
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">TITLE TEXT</h2>
+        <h2 class="title is-3">Synthesizing training data process</h2>
         <img src="static/images/VAC/dataset_creation-1.png" alt="MY ALT TEXT"/>
         <h2 class="subtitle has-text-centered">
-          [Sample Text]
+          We selected videos with unoccluded
+objects and used provided masks to isolate object pixels. These were used to synthesize
+occlusion videos and create corresponding amodal completion ground truth. A vision
+language model (e.g. BLIP is utilized to generate ground truth’s text description.)
         </h2>
       </div>
     </div>
@@ -240,28 +249,28 @@
 <!-- Qualitative Results -->
 <section class="hero is-small">
   <div class="hero-body has-text-centered">
-    <h2 class="title is-3">RESULTS</h2>
+    <h2 class="title is-3">Results</h2>
     <div class="container">
       <div id="results-carousel" class="carousel results-carousel">
        <div class="item">
         <!-- Your image here -->
-        <img src="static/images/VAC/example_easy_case.png" alt="MY ALT TEXT"/>
+        <img src="static/images/VAC/example_easy_case_2.png" alt="MY ALT TEXT"/>
         <h2 class="subtitle has-text-centered">
-          [Sample Text 1]
+          Performance on an easy case (Less than 50% occlusion)
         </h2>
       </div>
       <div class="item">
         <!-- Your image here -->
-        <img src="static/images/VAC/example_hard_case.png" alt="MY ALT TEXT"/>
+        <img src="static/images/VAC/example_hard_case_2.png" alt="MY ALT TEXT"/>
         <h2 class="subtitle has-text-centered">
-          [Sample Text 2]
+          Perfomance on a hard case (More than 50% occlusion)
         </h2>
       </div>
       <div class="item">
         <!-- Your image here -->
-        <img src="static/images/VAC/example_zero_shot.png" alt="MY ALT TEXT"/>
+        <img src="static/images/VAC/example_extra_02.png" alt="MY ALT TEXT"/>
         <h2 class="subtitle has-text-centered">
-          [Sample Text 3]
+          Performance on another case
        </h2>
      </div>
      <!-- <div class="item">
