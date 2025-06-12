@@ -117,39 +117,22 @@
   </div>
 </section>
 
-
-<!-- Image carousel -->
-<!-- <section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-       <div class="item"> -->
-        <!-- Your image here -->
-        <!-- <img src="static/images/aisformer/AIS_explain/AIS_explain-1.png" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-          An explanation of different mask instances in Amodal Instance Segmentation (AIS). Given a region of interest (ROI) extracted by an object detector, AIS aims to extract both visible and invisible mask instances including occluder, visible, amodal, and invisible.
-        </h2>
-      </div>
-      <div class="item"> -->
-        <!-- Your image here -->
-        <!-- <img src="static/images/aisformer/ISvsAIS/ISvsAIS-1.png" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-          A comparison between Instance Segmentation (IS) and Amodal Instance Segmentation (AIS). Given an image with ROI (a), IS aims to extract the visible mask instance (b) whereas AIS aims to extract both the visible mask and occluded parts (c).
-        </h2>
-      </div>
-      <div class="item"> -->
-        <!-- Your image here -->
-        <!-- <img src="static/images/aisformer/aistr-Flowchart/aistr-Flowchart-1.png" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-          The overall flowchart of our proposed AISFormer. AISFormer consists of four modules corresponding to (i) feature encoding: after obtaining the region of interest (ROI) feature from the backbone and ROIAlign algorithm, CNN-based layers and a transformer encoder are applied to learn both short-range and long-range features of the given ROI.(ii) mask transformer decoding: generate the occluder, visible, and amodal mask query embeddings by a transformer decoder (iii) invisible mask embedding to model the coherence between the amodal and visible masks by computing the invisible mask embedding, and (iv) segmentation to estimate output masks including occluder, visible, amodal and invisible.
-       </h2>
-     </div>
+<!-- Teaser video-->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <video poster="" id="tree" autoplay controls muted loop height="100%">
+        <!-- Your video here -->
+        <source src="static/videos/demo3.mp4"
+        type="video/mp4">
+      </video>
+      <h2 class="subtitle has-text-centered">
+        Text-Guided Video Amodal Completion. Given an input video, users select an object of interest in the first frame and provide a text description of the expected output. Our pipeline then generates a completed video, filling in the missing shape and texture of the object. 
+      </h2>
+    </div>
   </div>
-</div>
-</div>
-</section> -->
-<!-- End image carousel -->
-
+</section>
+<!-- End teaser video -->
 
 <!-- Network -->
 <section class="section hero is-small">
